@@ -1,0 +1,10 @@
+.nav-link.active {
+    border-bottom: 2px solid white;
+    font-weight: 600;
+}
+
+.mobile-link.active {
+    border-left: 4px solid white;
+    padding-left: 0.5rem;
+    font-weight: 600;
+}

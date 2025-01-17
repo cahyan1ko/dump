@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./src/style.css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <nav
+            class="bg-[#754E1A] bg-opacity-90 p-4 fixed w-full top-0 left-0 z-50 shadow-md"
+        >
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a href="index.html" class="text-white text-2xl font-bold"
+                    >cahyaaniko</a
+                >
+
+                <div id="navMenu" class="hidden md:flex space-x-6">
+                    <a
+                        href="#home"
+                        class="nav-link text-white hover:text-[#F8E1B7] transition duration-300"
+                        >Beranda</a
+                    >
+                    <a
+                        href="#about"
+                        class="nav-link text-white hover:text-[#F8E1B7] transition duration-300"
+                        >Tentang Saya</a
+                    >
+                    <a
+                        href="#history"
+                        class="nav-link text-white hover:text-[#F8E1B7] transition duration-300"
+                        >Riwayat</a
+                    >
+                    <a
+                        href="#services"
+                        class="nav-link text-white hover:text-[#F8E1B7] transition duration-300"
+                        >Layanan</a
+                    >
+                    <a
+                        href="#contact"
+                        class="nav-link text-white hover:text-[#F8E1B7] transition duration-300"
+                        >Kontak</a
+                    >
+                </div>
+
+                <div class="hidden md:flex space-x-4">
+                    <a
+                        href="https://www.linkedin.com/in/cahya-niko-9949a1255/"
+                        class="text-white hover:text-blue-500 transition duration-300"
+                        target="_blank"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                        href="https://github.com/cahyan1ko"
+                        class="text-white hover:text-gray-400 transition duration-300"
+                        target="_blank"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/cahyaanikoo"
+                        class="text-white hover:text-pink-500 transition duration-300"
+                        target="_blank"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="md:hidden ml-auto">
+                    <button class="text-white" id="menuButton">
+                        <i
+                            class="fas fa-bars transition-transform duration-300 ease-in-out"
+                            id="menuIcon"
+                        ></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div
+            id="mobileMenu"
+            class="fixed md:hidden w-full bg-[#CBA35C] bg-opacity-80 backdrop-blur-sm text-white -translate-y-full transition-transform duration-300 ease-in-out z-40"
+            style="top: 64px"
+        >
+            <a
+                href="#home"
+                class="mobile-link block py-3 px-4 hover:bg-white/10 transition-colors duration-300 border-l-4 border-transparent"
+                >Beranda</a
+            >
+            <a
+                href="#about"
+                class="mobile-link block py-3 px-4 hover:bg-white/10 transition-colors duration-300 border-l-4 border-transparent"
+                >Tentang Saya</a
+            >
+            <a
+                href="#history"
+                class="mobile-link block py-3 px-4 hover:bg-white/10 transition-colors duration-300 border-l-4 border-transparent"
+                >Riwayat</a
+            >
+            <a
+                href="#services"
+                class="mobile-link block py-3 px-4 hover:bg-white/10 transition-colors duration-300 border-l-4 border-transparent"
+                >Layanan</a
+            >
+            <a
+                href="#contact"
+                class="mobile-link block py-3 px-4 hover:bg-white/10 transition-colors duration-300 border-l-4 border-transparent"
+                >Kontak</a
+            >
+
+            <div class="flex space-x-4 p-4">
+                <a
+                    href="https://www.linkedin.com/in/cahya-niko-9949a1255/"
+                    class="text-white hover:text-blue-500 transition duration-300"
+                    target="_blank"
+                >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                    href="https://github.com/cahyan1ko"
+                    class="text-white hover:text-gray-400 transition duration-300"
+                    target="_blank"
+                >
+                    <i class="fab fa-github"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/cahyaanikoo"
+                    class="text-white hover:text-pink-500 transition duration-300"
+                    target="_blank"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Home Section -->
+        <section
+            id="home"
+            class="h-screen flex items-center justify-start text-white relative"
+        >
+            <!-- Background image -->
+            <img
+                src="/src/images/img-bg-home.jpg"
+                alt=""
+                class="absolute top-0 left-0 w-full h-full object-cover"
+            />
+            <div class="text-left px-8 relative z-10">
+                <h3
+                    class="text-4xl font-semibold mb-4 text-white animate__animated animate__fadeIn animate__delay-2s"
+                >
+                    Saya seorang
+                    <span id="typed-output" class="text-[#F8E1B7]"></span>
+                </h3>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section
+            id="about"
+            class="h-screen flex flex-col items-center justify-center text-white px-6 py-8 relative"
+        >
+            <img
+                src="/src/images/img-bg-about.jpg"
+                alt="Background Image"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+            />
+            <div class="relative z-10 text-center">
+                <h1 class="text-4xl font-bold mb-4">Tentang Saya</h1>
+                <p
+                    class="text-lg font-semibold mb-6 text-center max-w-3xl mx-auto"
+                >
+                    Saya adalah seorang yang penuh semangat dalam mengejar mimpi
+                    dan meraih tujuan hidup. Dengan pengalaman di berbagai
+                    bidang, saya percaya bahwa setiap langkah yang diambil
+                    adalah bagian dari perjalanan untuk berkembang. Dari dunia
+                    musik hingga dunia teknologi, saya senang menemukan makna di
+                    setiap kegiatan yang saya lakukan. Saya berkomitmen untuk
+                    terus belajar dan menciptakan karya yang bermanfaat.
+                </p>
+            </div>
+        </section>
+
+        <section
+            id="history"
+            class="h-screen bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-10"
+        >
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Riwayat Perjalanan Saya</h1>
+                <p class="text-lg">
+                    Mengikuti langkah-langkah yang telah membentuk siapa saya
+                    sekarang.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 px-4">
+                <!-- Card 1 -->
+                <div
+                    class="max-w-xs rounded-lg overflow-hidden shadow-lg bg-white text-black transform hover:scale-105 transition-all duration-300"
+                >
+                    <img
+                        src="/src/images/history1.jpg"
+                        alt="Momen 1"
+                        class="w-full h-56 object-cover rounded-t-lg"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Momen 1
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            Deskripsi tentang momen pertama dalam perjalanan
+                            saya, yang penuh dengan tantangan dan pembelajaran.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="max-w-xs rounded-lg overflow-hidden shadow-lg bg-white text-black transform hover:scale-105 transition-all duration-300"
+                >
+                    <img
+                        src="/src/images/history2.jpg"
+                        alt="Momen 2"
+                        class="w-full h-56 object-cover rounded-t-lg"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Momen 2
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            Momen kedua yang memperlihatkan keputusan penting
+                            dalam hidup yang membawa perubahan besar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="max-w-xs rounded-lg overflow-hidden shadow-lg bg-white text-black transform hover:scale-105 transition-all duration-300"
+                >
+                    <img
+                        src="/src/images/history3.jpg"
+                        alt="Momen 3"
+                        class="w-full h-56 object-cover rounded-t-lg"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Momen 3
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            Melangkah ke tahap yang lebih tinggi, mengatasi
+                            rintangan, dan berkembang menjadi lebih baik.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="max-w-xs rounded-lg overflow-hidden shadow-lg bg-white text-black transform hover:scale-105 transition-all duration-300"
+                >
+                    <img
+                        src="/src/images/history4.jpg"
+                        alt="Momen 4"
+                        class="w-full h-56 object-cover rounded-t-lg"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Momen 4
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            Pencapaian besar yang membuat saya lebih percaya
+                            diri untuk melangkah ke fase berikutnya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section
+            id="services"
+            class="h-screen flex items-center justify-center bg-orange-500 text-white"
+        >
+            <h1 class="text-4xl font-bold">Our Services</h1>
+            <p class="text-lg">
+                We offer a wide range of services to help you succeed.
+            </p>
+        </section>
+
+        <section
+            id="contact"
+            class="h-screen flex items-center justify-center bg-red-500 text-white"
+        >
+            <h1 class="text-4xl font-bold">Contact Us</h1>
+            <p class="text-lg">Get in touch with us for more information.</p>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var options = {
+                strings: [
+                    "Pemimpi yang Tak Pernah Menyerah . . .",
+                    "Pencari Makna dalam Setiap Langkah . . .",
+                    "Penulis Cerita Kehidupan . . .",
+                    "Pencipta Jejak di Dunia . . .",
+                    "Penyelam Kedalaman Pikiran . . .",
+                    "Petualang Tanpa Batas . . .",
+                    "Arsitek Mimpi . . .",
+                    "Pelukis Langit Impian . . .",
+                    "Penerjemah Rasa dan Kata . . .",
+                    "Pencipta Keajaiban Sehari-hari . . .",
+                ],
+                typeSpeed: 60, // Kecepatan pengetikan (ms per karakter)
+                backSpeed: 30, // Kecepatan penghapusan (ms per karakter)
+                backDelay: 1000, // Waktu tunggu sebelum menghapus teks (ms)
+                startDelay: 500, // Waktu tunggu sebelum memulai efek pengetikan (ms)
+                loop: true, // Ulangi efek untuk seterusnya
+                showCursor: true, // Tampilkan kursor seperti mengetik
+                backspaceOnDelete: true,
+            }
+
+            var typed = new Typed("#typed-output", options)
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll("section")
+                const navLinks = document.querySelectorAll(".nav-link")
+                const mobileLinks = document.querySelectorAll(".mobile-link")
+
+                function hapusSemuaLinkAktif() {
+                    navLinks.forEach((link) => link.classList.remove("active"))
+                    mobileLinks.forEach((link) =>
+                        link.classList.remove("active"),
+                    )
+                }
+
+                function tambahLinkAktif(id) {
+                    navLinks.forEach((link) => {
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active")
+                        }
+                    })
+
+                    mobileLinks.forEach((link) => {
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active")
+                        }
+                    })
+                }
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (
+                                entry.isIntersecting &&
+                                entry.intersectionRatio >= 0.5
+                            ) {
+                                hapusSemuaLinkAktif()
+                                tambahLinkAktif(entry.target.id)
+                            }
+                        })
+                    },
+                    {
+                        threshold: 0.5,
+                        rootMargin: "-50px 0px",
+                    },
+                )
+
+                sections.forEach((section) => observer.observe(section))
+
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault()
+                        const targetId = this.getAttribute("href").substring(1)
+                        const targetSection = document.getElementById(targetId)
+                        targetSection.scrollIntoView({ behavior: "smooth" })
+                    })
+                })
+            })
+            const menuButton = document.getElementById("menuButton")
+            const mobileMenu = document.getElementById("mobileMenu")
+            const menuIcon = document.getElementById("menuIcon")
+
+            menuButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("-translate-y-full")
+                mobileMenu.classList.toggle("translate-y-0")
+
+                if (mobileMenu.classList.contains("translate-y-0")) {
+                    menuIcon.classList.remove("fa-bars")
+                    menuIcon.classList.add("fa-times")
+                    menuIcon.classList.add("rotate-90")
+                } else {
+                    menuIcon.classList.remove("fa-times")
+                    menuIcon.classList.add("fa-bars")
+                    menuIcon.classList.remove("rotate-90")
+                }
+            })
+        </script>
+    </body>
+</html>
